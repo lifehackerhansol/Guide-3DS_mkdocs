@@ -8,7 +8,7 @@
         <meta name="author" content="NH Discord Server.">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Checking for CFW - 3DS Hacks Guide</title>
+        <title>Linux - 3DS Hacks Guide</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -73,7 +73,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Checking for CFW</a>
+    <a href="../checking-for-cfw/" class="dropdown-item">Checking for CFW</a>
 </li>
                                     
 <li>
@@ -97,7 +97,7 @@
 </li>
             
 <li>
-    <a href="../formatting-sd-%28linux%29/" class="dropdown-item">Linux</a>
+    <a href="./" class="dropdown-item active">Linux</a>
 </li>
     </ul>
   </li>
@@ -172,7 +172,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#checking-for-cfw" class="nav-link">Checking for CFW</a>
+            <li class="nav-item" data-level="1"><a href="#formatting-sd-linux" class="nav-link">Formatting SD (Linux)</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#required-reading" class="nav-link">Required Reading</a>
               <ul class="nav flex-column">
@@ -189,43 +189,44 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="checking-for-cfw">Checking for CFW</h1>
+<h1 id="formatting-sd-linux">Formatting SD (Linux)</h1>
 <hr />
 <h2 id="required-reading">Required Reading</h2>
-<p>This is an add-on section to check if your console already has a modern custom firmware.</p>
-<p>If your console already has an arm9loaderhax or boot9strap based custom firmware, you will need to follow the instructions indicated to upgrade your setup to a modern one.</p>
-<div class="admonition tip">
-<p class="admonition-title">Note</p>
-<p>If your console has a menuhax based CFW setup, you should <a href="../../troubleshooting/#clear-home-menu-extdata">clear Home Menu's extdata</a>, then follow all instructions on your SysNAND.</p>
-</div>
+<p>This is an add-on section for formatting an SD card to work with the 3DS.</p>
+<p>If the 3DS already recognizes the SD card, this guide is not required.</p>
+<p>This page is for Linux users only. If you are not on Linux, check out the <a href="../formatting-sd-%28windows%29/">Formatting SD (Windows)</a> or <a href="../formatting-sd-%28mac%29/">Formatting SD (Mac)</a> pages.</p>
 <h2 id="instructions">Instructions</h2>
+<h3 id="section-i-determining-which-slot-your-sd-card-is-in">Section I - Determining which slot your SD card is in</h3>
 <ol>
-<li>Turn off your console</li>
-<li>Hold the (Select) button</li>
-<li>Turn on your console while still holding the (Select) button</li>
-<li>You should now see a configuration menu of some sort</li>
+<li>Make sure your SD card is <strong>not</strong> inserted</li>
+<li>Launch the Linux Terminal</li>
+<li>Type <code>watch "lsblk"</code></li>
+<li>Insert your SD card into your PC</li>
+<li>Observe the output. It should match something like this:</li>
 </ol>
-<hr />
-<div class="admonition tip">
-<p class="admonition-title">HOME menu</p>
-<p>If your console boots to the normal home menu, return to <a href="../../user-guide/get-started/">Get Started</a></p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Version below 7.0.5</p>
-<p>If you see a Luma3DS version of 7.0.5 or lower, continue to <a href="../a9lh-to-b9s/">A9LH to B9S</a></p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Version 7.1</p>
-<p>If you see a Luma3DS version of 7.1, continue to <a href="../updating-b9s/">Updating B9S</a></p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Version 8.0+</p>
-<p>If you see a Luma3DS version of 8.0 or greater, continue to <a href="../restoring-updating-cfw/">Restoring / Updating CFW</a></p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">None of the above</p>
-<p>If you see something not described by the above options, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and ask, in English, for help.</p>
-</div></div>
+<pre><code>NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+mmcblk0     179:0    0   3,8G  0 disk
+└─mmcblk0p1 179:1    0   3,7G  0 part /run/media/user/FFFF-FFFF
+</code></pre>
+<ol>
+<li>Take note of the device mount point. In our example above, it was <code>mmcblk0</code></li>
+<li>If <code>RO</code> is set to 1, make sure the lock switch is not slid down</li>
+<li>Hit CTRL + C to exit the menu</li>
+</ol>
+<h3 id="section-ii-formatting-the-card">Section II - Formatting the card</h3>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/8/85/Cfdisk_screenshot.png" /></p>
+<ol>
+<li>Type in <code>sudo cfdisk /dev/(device mount point from above)</code></li>
+<li>On each partition, hit <code>Delete</code></li>
+<li>Create a new Primary partition that covers the size of your entire SD card<ul>
+<li>This will create a new partition with the linux filesystem</li>
+</ul>
+</li>
+<li>Select type and take a look at the menu</li>
+<li>Find "W95 FAT32" and take note of the code on the left side of that text</li>
+<li>Press any key, then enter the code you took note of in the previous step</li>
+<li>Hit enter, then hit Quit</li>
+</ol></div>
             </div>
         </div>
 

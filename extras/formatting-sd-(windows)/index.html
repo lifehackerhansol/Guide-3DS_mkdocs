@@ -8,7 +8,7 @@
         <meta name="author" content="NH Discord Server.">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Checking for CFW - 3DS Hacks Guide</title>
+        <title>Windows - 3DS Hacks Guide</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -73,7 +73,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Checking for CFW</a>
+    <a href="../checking-for-cfw/" class="dropdown-item">Checking for CFW</a>
 </li>
                                     
 <li>
@@ -89,7 +89,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../formatting-sd-%28windows%29/" class="dropdown-item">Windows</a>
+    <a href="./" class="dropdown-item active">Windows</a>
 </li>
             
 <li>
@@ -172,13 +172,21 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#checking-for-cfw" class="nav-link">Checking for CFW</a>
+            <li class="nav-item" data-level="1"><a href="#formatting-sd-windows" class="nav-link">Formatting SD (Windows)</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#required-reading" class="nav-link">Required Reading</a>
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#what-you-need" class="nav-link">What You Need</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#instructions" class="nav-link">Instructions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#common-errors" class="nav-link">Common Errors</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -189,43 +197,48 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="checking-for-cfw">Checking for CFW</h1>
+<h1 id="formatting-sd-windows">Formatting SD (Windows)</h1>
 <hr />
 <h2 id="required-reading">Required Reading</h2>
-<p>This is an add-on section to check if your console already has a modern custom firmware.</p>
-<p>If your console already has an arm9loaderhax or boot9strap based custom firmware, you will need to follow the instructions indicated to upgrade your setup to a modern one.</p>
-<div class="admonition tip">
-<p class="admonition-title">Note</p>
-<p>If your console has a menuhax based CFW setup, you should <a href="../../troubleshooting/#clear-home-menu-extdata">clear Home Menu's extdata</a>, then follow all instructions on your SysNAND.</p>
-</div>
+<p>This is an add-on section for formatting an SD card to work with the 3DS.</p>
+<p>If the 3DS already recognizes the SD card, this guide is not required.</p>
+<p>This page is for Windows users only. If you are not on Windows, check out the <a href="../formatting-sd-%28linux%29/">Formatting SD (Linux)</a> or <a href="../formatting-sd-%28mac%29/">Formatting SD (Mac)</a> pages.</p>
+<h2 id="what-you-need">What You Need</h2>
+<ul>
+<li>The latest version of <a href="http://ridgecrop.co.uk/index.htm?guiformat.htm">guiformat</a></li>
+</ul>
 <h2 id="instructions">Instructions</h2>
 <ol>
-<li>Turn off your console</li>
-<li>Hold the (Select) button</li>
-<li>Turn on your console while still holding the (Select) button</li>
-<li>You should now see a configuration menu of some sort</li>
+<li>Insert your SD card into your computer</li>
+<li>If the SD card has any files and folders on it, copy everything to a folder on your computer</li>
+<li>Run <code>guiformat.exe</code></li>
+<li>Select your SD card's drive letter for "Drive"</li>
 </ol>
-<hr />
-<div class="admonition tip">
-<p class="admonition-title">HOME menu</p>
-<p>If your console boots to the normal home menu, return to <a href="../../user-guide/get-started/">Get Started</a></p>
+<div class="admonition danger">
+<p class="admonition-title">Important</p>
+<p>Make sure you choose the correct drive letter, otherwise you might accidentally erase the wrong drive!</p>
 </div>
-<div class="admonition tip">
-<p class="admonition-title">Version below 7.0.5</p>
-<p>If you see a Luma3DS version of 7.0.5 or lower, continue to <a href="../a9lh-to-b9s/">A9LH to B9S</a></p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Version 7.1</p>
-<p>If you see a Luma3DS version of 7.1, continue to <a href="../updating-b9s/">Updating B9S</a></p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Version 8.0+</p>
-<p>If you see a Luma3DS version of 8.0 or greater, continue to <a href="../restoring-updating-cfw/">Restoring / Updating CFW</a></p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">None of the above</p>
-<p>If you see something not described by the above options, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and ask, in English, for help.</p>
-</div></div>
+<ol>
+<li>Select a size for "Allocation unit size"<ul>
+<li>If the SD card is 64GB or below, choose 32768</li>
+<li>If the SD card is above 64GB, choose 65536</li>
+</ul>
+</li>
+<li>Enter anything for "Volume label"</li>
+<li>Ensure that "Quick Format" is selected</li>
+<li>Click "Start"</li>
+<li>Click "OK"</li>
+<li>Wait for the format to finish</li>
+<li>Click "Close"</li>
+<li>If the SD card had any files and folders on it before the format, copy everything back from your computer</li>
+</ol>
+<h2 id="common-errors">Common Errors</h2>
+<ul>
+<li>Failed to open device: GetLastError()=32<ul>
+<li>Close everything that may be using the SD card, such as any File Explorer windows.</li>
+</ul>
+</li>
+</ul></div>
             </div>
         </div>
 
