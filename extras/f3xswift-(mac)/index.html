@@ -8,7 +8,7 @@
         <meta name="author" content="NH Discord Server.">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>A9LH to B9S - 3DS Hacks Guide</title>
+        <title>macOS (10.13 or higher) - 3DS Hacks Guide</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -69,7 +69,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active">A9LH to B9S</a>
+    <a href="../a9lh-to-b9s/" class="dropdown-item">A9LH to B9S</a>
 </li>
                                     
 <li>
@@ -135,7 +135,7 @@
 </li>
             
 <li>
-    <a href="../f3xswift-%28mac%29/" class="dropdown-item">macOS (10.13 or higher)</a>
+    <a href="./" class="dropdown-item active">macOS (10.13 or higher)</a>
 </li>
             
 <li>
@@ -198,13 +198,21 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#a9lh-to-b9s" class="nav-link">A9LH to B9S</a>
+            <li class="nav-item" data-level="1"><a href="#f3xswift-mac" class="nav-link">F3XSwift (Mac)</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#required-reading" class="nav-link">Required Reading</a>
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#what-you-need" class="nav-link">What You Need</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#instructions" class="nav-link">Instructions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#return-to-get-started" class="nav-link">Return to Get Started</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -215,79 +223,39 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="a9lh-to-b9s">A9LH to B9S</h1>
+<h1 id="f3xswift-mac">F3XSwift (Mac)</h1>
 <hr />
 <h2 id="required-reading">Required Reading</h2>
-<p>This page is for existing arm9loaderhax users to update their devices to boot9strap.</p>
-<p>All future releases of Luma3DS will only be made in the <code>.firm</code> format, which will only be compatible with boot9strap and sighax. This means that to continue receiving the latest updates of Luma3DS, you should use this page to update your installation.</p>
-<p>To use the <a href="https://wikipedia.org/wiki/Magnet_URI_scheme">magnet</a> links on this page, you will need a torrent client like <a href="http://dev.deluge-torrent.org/wiki/Download">Deluge</a>.</p>
-<p>To extract the <code>.7z</code> files linked on this page, you will need a file archiver like <a href="http://www.7-zip.org/">7-Zip</a> or <a href="https://theunarchiver.com/">The Unarchiver</a>.</p>
-<div class="admonition danger">
-<p class="admonition-title">Important</p>
-<p>While we believe that custom firmware is safe for online use, there have been online network bans in the past, primarily for cheating and suspicious eShop behavior.</p>
-</div>
-<h3 id="what-you-need">What You Need</h3>
+<p>This is an add-on section for checking your SD card for errors using F3XSwift.</p>
+<p>Depending on the size of your SD card and the speed of your computer, this process can take up to several hours!</p>
+<p>This page is for Mac users only. If you are not on Mac, check out the <a href="../h2testw-%28windows%29/">H2testw (Windows)</a> or <a href="../f3-%28linux%29/">F3 (Linux)</a> pages.</p>
 <div class="admonition tip">
-<p>Note that the following required file named <code>secret_sector.bin</code> is the same one that was found in the various <code>data_input.zip</code> file versions. If you already have that file on your disk somewhere, you can use that one instead of downloading the one below.</p>
-<p>Note that, only on New 3DS, <code>secret_sector.bin</code> is needed to revert the arm9loaderhax exploit, which is why it is not needed for the installation of boot9strap on a stock console. If you do not have a New 3DS, you do not need <code>secret_sector.bin</code>.</p>
+<p class="admonition-title">Older macOS versions</p>
+<p>F3XSwift is only compatible with macOS 10.13 (High Sierra) and above. If you have an older version of macOS, follow <a href="../f3x-%28mac%29/">F3X (Mac)</a> instead.</p>
 </div>
+<h2 id="what-you-need">What You Need</h2>
 <ul>
-<li><i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - <strong>New 3DS Users Only:</strong> <a href="magnet:?xt=urn:btih:15a3c97acf17d67af98ae8657cc66820cc58f655&amp;dn=secret_sector.bin&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">secret_sector.bin</a></li>
-<li>The latest release of <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a> </li>
-<li>The v7.0.5 release of <a href="https://github.com/LumaTeam/Luma3DS/releases/tag/v7.0.5">Luma3DS</a> <em>(the <code>.7z</code> file)</em></li>
-<li>The latest release of <a href="https://github.com/d0k3/SafeB9SInstaller/releases/latest">SafeB9SInstaller</a></li>
-<li>The latest release of <a href="https://github.com/SciresM/boot9strap/releases/latest">boot9strap</a> <em>(<code>boot9strap-1.3.zip</code>; not the <code>devkit</code> file, not the <code>ntr</code> file)</em></li>
+<li>The latest release of <a href="https://github.com/vrunkel/F3XSwift/releases/latest">F3XSwift</a></li>
 </ul>
 <h2 id="instructions">Instructions</h2>
-<h3 id="section-i-prep-work">Section I - Prep Work</h3>
-<div class="admonition tip">
-<p>For all steps in this section, overwrite any existing files on your SD card.</p>
-</div>
 <ol>
-<li>Power off your device</li>
 <li>Insert your SD card into your computer</li>
-<li>Copy <code>boot.firm</code> and <code>boot.3dsx</code> from the latest version Luma3DS <code>.zip</code> to the root of your SD card</li>
-<li>Copy <code>arm9loaderhax.bin</code> from the v7.0.5 Luma3DS <code>.7z</code> to the root of your SD card</li>
-<li>Delete any existing <code>.bin</code> payloads in the <code>/luma/payloads/</code> folder on your SD card as they will not be compatible with boot9strap compatible Luma3DS versions</li>
-<li>Copy <code>SafeB9SInstaller.bin</code> from the SafeB9SInstaller <code>.zip</code> to the <code>/luma/payloads/</code> folder on your SD card</li>
-<li>Create a folder named <code>boot9strap</code> on the root of your SD card</li>
-<li>Copy <code>boot9strap.firm</code> and <code>boot9strap.firm.sha</code> from the boot9strap <code>.zip</code> to the <code>/boot9strap/</code> folder on your SD card</li>
-<li><strong>New 3DS Users Only:</strong> Copy <code>secret_sector.bin</code> to the <code>/boot9strap/</code> folder on your SD card</li>
+<li>Run the F3XSwift app</li>
+<li>Select your SD card from the list of volumes</li>
+<li>Click "Test"</li>
+<li>Click "Open" to confirm writing to your SD card</li>
+<li>Wait until the process is complete</li>
 </ol>
 <div class="admonition tip">
-<p><img alt="" src="/images/screenshots/a9lh-to-b9s-file-layout.png" /></p>
+<p class="admonition-title">Success</p>
+<p>If the test shows the result <code>Success! Your card is ok!</code>, your SD card is good and you can delete all .h2w files on your SD card</p>
 </div>
-<ol>
-<li>Reinsert your SD card into your device</li>
-</ol>
-<h3 id="section-ii-installing-boot9strap">Section II - Installing boot9strap</h3>
-<ol>
-<li>Boot your device while holding (Start) to launch SafeB9SInstaller<ul>
-<li>If you see the luma configuration screen instead of SafeB9SInstaller, simply press (Start), then shutdown your 3DS and try again</li>
-<li>If this gives you an error, try either using a new SD card, or formatting your current SD card (backup existing files first)</li>
-</ul>
-</li>
-<li>Wait for all safety checks to complete<ul>
-<li>If you get an "OTP Crypto Fail" error, download <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:d25dab06a7e127922d70ddaa4fe896709dc99a1e&amp;dn=aeskeydb.bin&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">aeskeydb.bin</a>, then put it in the <code>/boot9strap/</code> folder on your SD card and try again</li>
-</ul>
-</li>
-<li>When prompted, input the key combo given to install boot9strap</li>
-<li>Once it has completed, press (A) to reboot your device.<ul>
-<li>If your device shuts down on boot, ensure that you have copied <code>boot.firm</code> from the Luma3DS <code>.zip</code> to the root of your SD card</li>
-</ul>
-</li>
-</ol>
-<h3 id="section-iii-configuring-luma3ds">Section III - Configuring Luma3DS</h3>
-<ol>
-<li>In the Luma3DS configuration menu, use the (A) button and the D-Pad to turn on the following:    <ul>
-<li><strong>"Show NAND or user string in System Settings"</strong></li>
-</ul>
-</li>
-<li>Press (Start) to save and reboot</li>
-</ol>
-<hr />
+<div class="admonition danger">
+<p class="admonition-title">Error</p>
+<p>If the test shows any other results, your SD card may be corrupted or damaged and you may have to replace it!</p>
+</div>
 <div class="admonition tip">
-<h3 id="continue-to-finalizing-setup">Continue to <a href="../../finalizing-setup/">Finalizing Setup</a></h3>
+<h2 id="return-to-get-started">Return to <a href="../../user-guide/get-started/">Get Started</a></h2>
 </div></div>
             </div>
         </div>
