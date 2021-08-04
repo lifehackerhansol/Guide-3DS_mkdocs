@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="NH Discord Server.">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Installing boot9strap (Hardmod) - 3DS Hacks Guide</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/darcula.min.css">
+        <link href="../../css/custom.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">3DS Hacks Guide</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../get-started/" class="dropdown-item">Get Started</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Methods</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../installing-boot9strap-%28soundhax%29/" class="dropdown-item">Soundhax</a>
+</li>
+            
+<li>
+    <a href="../seedminer/" class="dropdown-item">Seedminer</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../finalizing-setup/" class="dropdown-item">Finalizing Setup</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../extras/a9lh-to-b9s/" class="dropdown-item">A9LH to B9S</a>
+</li>
+                                    
+<li>
+    <a href="../../extras/checking-for-cfw/" class="dropdown-item">Checking for CFW</a>
+</li>
+                                    
+<li>
+    <a href="../../extras/ctrtransfer/" class="dropdown-item">CTRtransfer</a>
+</li>
+                                    
+<li>
+    <a href="../../extras/godmode9-usage/" class="dropdown-item">GodMode9 Usage</a>
+</li>
+                                    
+<li>
+    <a href="../../extras/move-emunand/" class="dropdown-item">Move EmuNAND</a>
+</li>
+                                    
+<li>
+    <a href="../../extras/nsui/" class="dropdown-item">NSUI</a>
+</li>
+                                    
+<li>
+    <a href="../../extras/region-changing/" class="dropdown-item">Region Changing</a>
+</li>
+                                    
+<li>
+    <a href="../../extras/restoring-updating-cfw/" class="dropdown-item">Restoring / Updating CFW</a>
+</li>
+                                    
+<li>
+    <a href="../../extras/updating-b9s/" class="dropdown-item">Updating B9S</a>
+</li>
+                                    
+<li>
+    <a href="../../extras/uninstall-cfw/" class="dropdown-item">Uninstall CFW</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../faq/" class="nav-link">FAQ</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../troubleshooting/" class="nav-link">Troubleshooting</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../credits/" class="nav-link">Credits</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../privacy-policy/" class="nav-link">Privacy Policy</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#installing-boot9strap-hardmod" class="nav-link">Installing boot9strap (Hardmod)</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#required-reading" class="nav-link">Required Reading</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#instructions" class="nav-link">Instructions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="installing-boot9strap-hardmod">Installing boot9strap (Hardmod)</h1>
+<hr />
+<h2 id="required-reading">Required Reading</h2>
+<p>An excellent guide to getting a hardmod can be found <a href="https://gbatemp.net/threads/414498/">here</a>.</p>
+<p>This is a currently working implementation of the "FIRM partitions known-plaintext" exploit detailed <a href="https://www.3dbrew.org/wiki/3DS_System_Flaws">here</a>.</p>
+<p>To use the <a href="https://wikipedia.org/wiki/Magnet_URI_scheme">magnet</a> links on this page, you will need a torrent client like <a href="http://dev.deluge-torrent.org/wiki/Download">Deluge</a>.</p>
+<p>To extract the <code>.7z</code> files linked on this page, you will need a file archiver like <a href="http://www.7-zip.org/">7-Zip</a> or <a href="https://theunarchiver.com/">The Unarchiver</a>.</p>
+<p>This will work on New 3DS, New 2DS, Old 3DS, and Old 2DS on <em>all</em> versions that you have a corresponding <code>.firm</code> for.</p>
+<h3 id="what-you-need">What You Need</h3>
+<ul>
+<li>Your NAND image extracted using your <a href="https://gbatemp.net/threads/414498/">hardmod</a></li>
+<li>The latest release of <a href="https://github.com/SciresM/boot9strap/releases/latest">boot9strap</a> <em>(standard boot9strap; not the <code>devkit</code> file, not the <code>ntr</code> file)</em></li>
+<li>The latest version of <a href="https://github.com/ihaveamac/hardmod-b9s-installer/releases/latest">hardmod-b9s-installer</a><ul>
+<li>Windows users can use the compiled <code>.exe</code>, while Mac and Linux users will need to have <a href="https://www.python.org/downloads/">Python 3</a> installed to run the <code>.py</code></li>
+</ul>
+</li>
+<li>The latest release of <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a> </li>
+<li>The <code>.firm</code> corresponding to your device and version:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Version(s)</th>
+<th>Kernel</th>
+<th align="center">Old 3DS or Old 2DS</th>
+<th align="center">New 3DS or New 2DS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td>2.27-0</td>
+<td align="center"><a href="magnet:?xt=urn:btih:5c86edc67a1827991567b3c326a4182b66647d07&amp;dn=2.27-0_1.0_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.27-0_1.0_OLD.firm</a></td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td>1.1.0</td>
+<td>2.28-0</td>
+<td align="center"><a href="magnet:?xt=urn:btih:7c7696ff18e7d83a638b9c80f83052f763fb0fa5&amp;dn=2.28-0_1.1_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.28-0_1.1_OLD.firm</a></td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td>2.0.0</td>
+<td>2.29-7</td>
+<td align="center"><a href="magnet:?xt=urn:btih:9ba9245a8cc22ddf9f4cd22d7572b443efd47b2d&amp;dn=2.29-7_2.0_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.29-7_2.0_OLD.firm</a></td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td>2.1.0</td>
+<td>2.30-18</td>
+<td align="center"><a href="magnet:?xt=urn:btih:3584e44a83fc0e9c9e1bd31e38982b2bd62b9436&amp;dn=2.30-18_2.1_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.30-18_2.1_OLD.firm</a></td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td>2.2.0</td>
+<td>2.31-40</td>
+<td align="center"><a href="magnet:?xt=urn:btih:b5148ff900e14710494965f173f16d3a05c6b072&amp;dn=2.31-40_2.2_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.31-40_2.2_OLD.firm</a></td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td>3.0.0</td>
+<td>2.32-15</td>
+<td align="center"><a href="magnet:?xt=urn:btih:43034e15ae11eb2faccfd3148f4283bedd2eeb88&amp;dn=2.32-15_3.0_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.32-15_3.0_OLD.firm</a></td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td>4.0.0</td>
+<td>2.33-4</td>
+<td align="center"><a href="magnet:?xt=urn:btih:a86afa2f784335446b6b9feebd5eb887a3bd2067&amp;dn=2.33-4_4.0_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.33-4_4.0_OLD.firm</a></td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td>4.1.0 - 4.5.0</td>
+<td>2.34-0</td>
+<td align="center"><a href="magnet:?xt=urn:btih:5e66281b3be1e7a26830e13357e9a3a998c12e11&amp;dn=2.34-0_4.1_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.34-0_4.1_OLD.firm</a></td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td>5.0.0</td>
+<td>2.35-6</td>
+<td align="center"><a href="magnet:?xt=urn:btih:b759e4003e5e16cbffcf894f5ec968628eb2a304&amp;dn=2.35-6_5.0_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.35-6_5.0_OLD.firm</a></td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td>5.1.0</td>
+<td>2.36-0</td>
+<td align="center"><a href="magnet:?xt=urn:btih:7e6ec0fcb79928cfd2073196ee97755d27cbb9c8&amp;dn=2.36-0_5.1_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.36-0_5.1_OLD.firm</a></td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td>6.0.0</td>
+<td>2.37-0</td>
+<td align="center"><a href="magnet:?xt=urn:btih:2d99d3d742bdf5579817adf6906a619cb901c7f0&amp;dn=2.37-0_6.0_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.37-0_6.0_OLD.firm</a></td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td>6.1.0 - 6.4.0</td>
+<td>2.38-0</td>
+<td align="center"><a href="magnet:?xt=urn:btih:79dfcc3c12147f30b0d32acf47059c64cc530ab7&amp;dn=2.38-0_6.1_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.38-0_6.1_OLD.firm</a></td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td>7.0.0 - 7.1.0</td>
+<td>2.39-4</td>
+<td align="center"><a href="magnet:?xt=urn:btih:7e11151de6873de92eae0c1052fe5b88ccda0c07&amp;dn=2.39-0_7.0_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.39-0_7.0_OLD.firm</a></td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td>7.2.0</td>
+<td>2.40-0</td>
+<td align="center"><a href="magnet:?xt=urn:btih:29a648302eb6b3833858a289147c78608622695b&amp;dn=2.40-0_7.2_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.40-0_7.2_OLD.firm</a></td>
+<td align="center">-</td>
+</tr>
+<tr>
+<td>8.0.0 - 8.1.0</td>
+<td>2.44-6 / 2.45-5</td>
+<td align="center"><a href="magnet:?xt=urn:btih:d07a3cc54ab50da5a1294727e5974b681417a90d&amp;dn=2.44-6_8.0_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.44-6_8.0_OLD.firm</a></td>
+<td align="center"><a href="magnet:?xt=urn:btih:bab35d663d1316e037985b002becd47f187f0f31&amp;dn=2.45-5_8.1_NEW.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.45-5_8.1_NEW.firm</a></td>
+</tr>
+<tr>
+<td>9.0.0 - 9.2.0</td>
+<td>2.46-0</td>
+<td align="center"><a href="magnet:?xt=urn:btih:1cda7efdc0b096c64bc2aff09653fb6a94f70802&amp;dn=2.46-0_9.0_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.46-0_9.0_OLD.firm</a></td>
+<td align="center"><a href="magnet:?xt=urn:btih:62089eda709232a20c03c73064f18714e19476b6&amp;dn=2.46-0_9.0_NEW.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.46-0_9.0_NEW.firm</a></td>
+</tr>
+<tr>
+<td>9.3.0 - 9.4.0</td>
+<td>2.48-3</td>
+<td align="center"><a href="magnet:?xt=urn:btih:29aafb4ebf327fbfb3d5ea34183124de156920f8&amp;dn=2.48-3_9.3_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.48-3_9.3_OLD.firm</a></td>
+<td align="center"><a href="magnet:?xt=urn:btih:778878e336c61f079d7b146c1afc08289a18357e&amp;dn=2.48-3_9.3_NEW.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.48-3_9.3_NEW.firm</a></td>
+</tr>
+<tr>
+<td>9.5.0</td>
+<td>2.49-0</td>
+<td align="center"><a href="magnet:?xt=urn:btih:b75b9e438ee0d56108d63016b92f67e932103cfb&amp;dn=2.49-0_9.5_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.49-0_9.5_OLD.firm</a></td>
+<td align="center"><a href="magnet:?xt=urn:btih:626d4be82d7cd1a0684ae56f54740dbe5061bc58&amp;dn=2.49-0_9.5_NEW.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.49-0_9.5_NEW.firm</a></td>
+</tr>
+<tr>
+<td>9.6.0 - 9.9.0</td>
+<td>2.50-1</td>
+<td align="center"><a href="magnet:?xt=urn:btih:6bfd08ed3aa62aeb05666defa0c639399f6cf523&amp;dn=2.50-1_9.6_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.50-1_9.6_OLD.firm</a></td>
+<td align="center"><a href="magnet:?xt=urn:btih:d6c28dbe1217a711f2214821804668ce7e131295&amp;dn=2.50-1_9.6_NEW.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.50-1_9.6_NEW.firm</a></td>
+</tr>
+<tr>
+<td>10.0.0</td>
+<td>2.50-7</td>
+<td align="center"><a href="magnet:?xt=urn:btih:63b5ab8f0ee881c71c059ab1ee9c1e0c10a5ff2c&amp;dn=2.50-7_10.0_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.50-7_10.0_OLD.firm</a></td>
+<td align="center"><a href="magnet:?xt=urn:btih:a603569254ebd6e6ae4de447458144bda97281c2&amp;dn=2.50-7_10.0_NEW.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.50-7_10.0_NEW.firm</a></td>
+</tr>
+<tr>
+<td>10.2.0 - 10.3.0</td>
+<td>2.50-9</td>
+<td align="center"><a href="magnet:?xt=urn:btih:611c7a468a61b5b085cd81f82559e284f6c477ce&amp;dn=2.50-9_10.2_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.50-9_10.2_OLD.firm</a></td>
+<td align="center"><a href="magnet:?xt=urn:btih:537fac39870d796ac163d962b4f145da101f6ab9&amp;dn=2.50-9_10.2_NEW.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.50-9_10.2_NEW.firm</a></td>
+</tr>
+<tr>
+<td>10.4.0 - 10.7.0</td>
+<td>2.50-11</td>
+<td align="center"><a href="magnet:?xt=urn:btih:deb1b8aed5820d1ce202c54782f856bb382e0e45&amp;dn=2.50-11_10.4_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.50-11_10.4_OLD.firm</a></td>
+<td align="center"><a href="magnet:?xt=urn:btih:8f6522179498e3e23c811155c247c1bf58c5c430&amp;dn=2.50-11_10.4_NEW.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.50-11_10.4_NEW.firm</a></td>
+</tr>
+<tr>
+<td>11.0.0</td>
+<td>2.51-0</td>
+<td align="center"><a href="magnet:?xt=urn:btih:10ce0c501e9c7ef03c698c0610e5325a6f076215&amp;dn=2.51-0_11.0_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.51-0_11.0_OLD.firm</a></td>
+<td align="center"><a href="magnet:?xt=urn:btih:4ecf0ed64f3ef94914542e7ad1aba336aae771c4&amp;dn=2.51-0_11.0_NEW.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.51-0_11.0_NEW.firm</a></td>
+</tr>
+<tr>
+<td>11.1.0</td>
+<td>2.51-2</td>
+<td align="center"><a href="magnet:?xt=urn:btih:1d858fbffdb9fac8adbebd9c640b287284098601&amp;dn=2.51-2_11.1_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.51-2_11.1_OLD.firm</a></td>
+<td align="center"><a href="magnet:?xt=urn:btih:307993b2b7b78502827458d6c6e78b75bea6eb41&amp;dn=2.51-2_11.1_NEW.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.51-2_11.1_NEW.firm</a></td>
+</tr>
+<tr>
+<td>11.2.0</td>
+<td>2.52-0</td>
+<td align="center"><a href="magnet:?xt=urn:btih:6de2e257f73f11151ebfb4bf1345be64e47aed52&amp;dn=2.52-0_11.2_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.52-0_11.2_OLD.firm</a></td>
+<td align="center"><a href="magnet:?xt=urn:btih:337e4618d30f9a84dd172b8e91f87451653c23b6&amp;dn=2.52-0_11.2_NEW.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.52-0_11.2_NEW.firm</a></td>
+</tr>
+<tr>
+<td>11.3.0</td>
+<td>2.53-0</td>
+<td align="center"><a href="magnet:?xt=urn:btih:9d8d62c50b0ef1ad35b5e62602f21fac773171ce&amp;dn=2.53-0_11.3_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.53-0_11.3_OLD.firm</a></td>
+<td align="center"><a href="magnet:?xt=urn:btih:53363ab66f877d9edf33f55e6abc3ccf72819191&amp;dn=2.53-0_11.3_NEW.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.53-0_11.3_NEW.firm</a></td>
+</tr>
+<tr>
+<td>11.4.0 - 11.7.0</td>
+<td>2.54-0</td>
+<td align="center"><a href="magnet:?xt=urn:btih:0dd89d42ad711f770da899af05ee162ede0d0070&amp;dn=2.54-0_11.4_OLD.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.54-0_11.4_OLD.firm</a></td>
+<td align="center"><a href="magnet:?xt=urn:btih:3b59dd43eec3edb133555f58d1180bfb196acbb4&amp;dn=2.54-0_11.4_NEW.firm&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fbt.xxx-tracker.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fopen.demonii.si%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fpublic.popcorn-tracker.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fthetracker.org%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.cypherpunks.ru%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ds.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.mg64.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.open-internet.nl%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.port443.xyz%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.qt.is%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker-2.msm8916.com%3A6969%2Fannounce">2.54-0_11.4_NEW.firm</a></td>
+</tr>
+<tr>
+<td>11.8.0 - 11.11.0</td>
+<td>2.55-0</td>
+<td align="center"><a href="magnet:?xt=urn:btih:ee882a07afcf3f6acc676f8dc0ab25f291b643e0&amp;dn=2.55-0%5F11.8%5FOLD.firm&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&amp;tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&amp;tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&amp;tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&amp;tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&amp;tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&amp;tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&amp;tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&amp;tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce">2.55-0_11.8_OLD.firm</a></td>
+<td align="center"><a href="magnet:?xt=urn:btih:97dc6ba91ed243596adb744cc20daa610c10fcab&amp;dn=2.55-0%5F11.8%5FNEW.firm&amp;tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&amp;tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&amp;tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&amp;tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&amp;tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&amp;tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&amp;tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&amp;tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&amp;tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&amp;tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce">2.55-0_11.8_NEW.firm</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="instructions">Instructions</h2>
+<h3 id="section-i-prep-work">Section I - Prep Work</h3>
+<ol>
+<li>Power off your device</li>
+<li>Insert your SD card into your computer</li>
+<li>Copy <code>boot.firm</code> and <code>boot.3dsx</code> from the Luma3DS <code>.zip</code> to the root of your SD card</li>
+<li>Copy the hardmod-b9s-installer folder from the hardmod-b9s-installer <code>.zip</code> to your computer</li>
+<li>Copy your downloaded <code>.firm</code> to the hardmod-b9s-installer folder on your computer</li>
+<li>Rename your downloaded <code>.firm</code> in the hardmod-b9s-installer folder on your computer to <code>current.firm</code></li>
+<li>Copy <code>boot9strap.firm</code> and <code>boot9strap.firm.sha</code> from the boot9strap <code>.zip</code> to the hardmod-b9s-installer folder on your computer</li>
+<li>Reinsert your SD card into your device</li>
+<li>Use your hardmod to create a NAND backup</li>
+<li>Move your NAND backup to the hardmod-b9s-installer folder on your computer and rename it to <code>NAND.bin</code></li>
+</ol>
+<h3 id="section-ii-installing-boot9strap">Section II - Installing boot9strap</h3>
+<ol>
+<li>Run hardmod-b9s-installer<ul>
+<li>Windows Users: Run <code>install-b9s.exe</code></li>
+<li>Mac and Linux Users: Run <code>install-b9s.py</code></li>
+</ul>
+</li>
+<li>Flash your outputted <code>NAND-patched.bin</code> to your device with your hardmod</li>
+<li>Power off your device</li>
+<li>Disconnect your hardmod</li>
+<li>Power on your device</li>
+</ol>
+<h3 id="section-iii-configuring-luma3ds">Section III - Configuring Luma3DS</h3>
+<ol>
+<li>Your device should have booted into the Luma3DS configuration menu<ul>
+<li>If you get a black screen, <a href="troubleshooting#black-screen-on-sysnand-boot-after-installing-boot9strap">follow this troubleshooting guide</a></li>
+</ul>
+</li>
+<li>Use the (A) button and the D-Pad to turn on the following:<ul>
+<li><strong>"Show NAND or user string in System Settings"</strong></li>
+</ul>
+</li>
+<li>Press (Start) to save and reboot<ul>
+<li>If you get an error, just continue the next page</li>
+</ul>
+</li>
+</ol>
+<hr />
+<div class="admonition tip">
+<h3 id="continue-to-finalizing-setup">Continue to <a href="../finalizing-setup">Finalizing Setup</a></h3>
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2021 <a href="https://discord.gg/C29hYvh" target="_blank">Nintendo Homebrew</a>, Maintained by the <a href="/Guide-3DS_mkdocs/credits">NH Discord Server</a>.</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

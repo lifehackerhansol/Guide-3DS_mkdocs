@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="NH Discord Server.">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Troubleshooting - 3DS Hacks Guide</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/darcula.min.css">
+        <link href="../css/custom.css" rel="stylesheet">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">3DS Hacks Guide</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../user-guide/get-started/" class="dropdown-item">Get Started</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Methods</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../user-guide/installing-boot9strap-%28soundhax%29/" class="dropdown-item">Soundhax</a>
+</li>
+            
+<li>
+    <a href="../user-guide/seedminer/" class="dropdown-item">Seedminer</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../finalizing-setup/" class="dropdown-item">Finalizing Setup</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../extras/a9lh-to-b9s/" class="dropdown-item">A9LH to B9S</a>
+</li>
+                                    
+<li>
+    <a href="../extras/checking-for-cfw/" class="dropdown-item">Checking for CFW</a>
+</li>
+                                    
+<li>
+    <a href="../extras/ctrtransfer/" class="dropdown-item">CTRtransfer</a>
+</li>
+                                    
+<li>
+    <a href="../extras/godmode9-usage/" class="dropdown-item">GodMode9 Usage</a>
+</li>
+                                    
+<li>
+    <a href="../extras/move-emunand/" class="dropdown-item">Move EmuNAND</a>
+</li>
+                                    
+<li>
+    <a href="../extras/nsui/" class="dropdown-item">NSUI</a>
+</li>
+                                    
+<li>
+    <a href="../extras/region-changing/" class="dropdown-item">Region Changing</a>
+</li>
+                                    
+<li>
+    <a href="../extras/restoring-updating-cfw/" class="dropdown-item">Restoring / Updating CFW</a>
+</li>
+                                    
+<li>
+    <a href="../extras/updating-b9s/" class="dropdown-item">Updating B9S</a>
+</li>
+                                    
+<li>
+    <a href="../extras/uninstall-cfw/" class="dropdown-item">Uninstall CFW</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../faq/" class="nav-link">FAQ</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Troubleshooting</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../credits/" class="nav-link">Credits</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../privacy-policy/" class="nav-link">Privacy Policy</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#troubleshooting" class="nav-link">Troubleshooting</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#required-reading" class="nav-link">Required Reading</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dsi-ds-functionality-is-broken-after-completing-the-guide" class="nav-link">DSi / DS functionality is broken after completing the guide</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#cannot-inject-hs-on-gateway-downgraded-device" class="nav-link">Cannot inject H&amp;S on Gateway downgraded device</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#a-browser-based-exploit-is-not-working" class="nav-link">A browser based exploit is not working</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#black-screen-on-sysnand-boot" class="nav-link">Black screen on SysNAND boot</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#clear-home-menu-extdata" class="nav-link">Clear Home Menu extdata</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#black-screen-on-sysnand-boot-after-installing-boot9strap" class="nav-link">Black screen on SysNAND boot after Installing boot9strap</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#blue-screen-on-boot-bootrom-error" class="nav-link">Blue screen on boot (bootrom error)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#system-update-error-after-installing-cfw" class="nav-link">System update error after installing CFW</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="troubleshooting">Troubleshooting</h1>
+<hr />
+<h2 id="required-reading">Required Reading</h2>
+<p>If you are unable to boot your device, please look for the section relevant to you and follow the instructions.</p>
+<p>If you still cannot solve your issue and need to reach out for help, please paste the contents of all relevant .log files from the root of your SD card into a <a href="https://gist.github.com/">Gist</a>, then come for help prepared with a detailed description of your problem and what you've tried.</p>
+<p>Note that if you have any payload files other than <code>GodMode9.firm</code> in the <code>/luma/payloads/</code> folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. </p>
+<p>To use the <a href="https://wikipedia.org/wiki/Magnet_URI_scheme">magnet</a> links on this page, you will need a torrent client like <a href="http://dev.deluge-torrent.org/wiki/Download">Deluge</a>.</p>
+<h2 id="dsi-ds-functionality-is-broken-after-completing-the-guide">DSi / DS functionality is broken after completing the guide</h2>
+<h3 id="what-you-need">What You Need</h3>
+<ul>
+<li>The latest release of <a href="https://github.com/MechanicalDragon0687/TWLFix-CFW/releases/latest">TWLFix-CFW</a> <em>(the .3dsx file)</em></li>
+</ul>
+<h3 id="instructions">Instructions</h3>
+<h4 id="section-i-prep-work">Section I - Prep Work</h4>
+<ol>
+<li>Power off your device</li>
+<li>Insert your SD card into your computer</li>
+<li>Create a folder named <code>3ds</code> on the root of your SD card if it does not already exist</li>
+<li>Copy <code>TWLFix-CFW.3dsx</code> to the <code>/3ds/</code> folder on your SD card</li>
+<li>Reinsert your SD card into your device</li>
+</ol>
+<h4 id="section-ii-fixing-twl">Section II - Fixing TWL</h4>
+<ol>
+<li>Open the Homebrew Launcher</li>
+<li>Launch TWLFix-CFW from the list of homebrew</li>
+<li>Press (A) to uninstall the broken TWL titles</li>
+<li>Press (Start) to reboot the device</li>
+<li>Perform a System Update by going to System Settings, then "Other Settings", then going all the way to the right and using "System Update"<ul>
+<li>The update will see that the essential TWL titles have been uninstalled, and will redownload and reinstall them</li>
+</ul>
+</li>
+<li>Once the update is complete, tap "OK" to reboot the device </li>
+</ol>
+<h2 id="cannot-inject-hs-on-gateway-downgraded-device">Cannot inject H&amp;S on Gateway downgraded device</h2>
+<p>This is caused by Gateway implementing a very shoddy downgrade method which leaves two versions of each app on the system. One of them is unused, but it confuses the H&amp;S inject system, causing it to inject into the wrong one.</p>
+<ol>
+<li>Power off your device</li>
+<li>Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9</li>
+<li>Navigate to <code>[1:] SYSNAND CTRNAND</code> -&gt; <code>title</code> -&gt; <code>00040010</code></li>
+<li>Navigate to the folder for your device and region:<ul>
+<li><strong>Old 3DS or Old 2DS EUR</strong>: <code>00022300</code> -&gt; <code>content</code></li>
+<li><strong>Old 3DS or Old 2DS JPN</strong>: <code>00020300</code> -&gt; <code>content</code></li>
+<li><strong>Old 3DS or Old 2DS USA</strong>: <code>00021300</code> -&gt; <code>content</code></li>
+<li><strong>New 3DS or New 2DS EUR</strong>: <code>20022300</code> -&gt; <code>content</code></li>
+<li><strong>New 3DS or New 2DS JPN</strong>: <code>20020300</code> -&gt; <code>content</code></li>
+<li><strong>New 3DS or New 2DS USA</strong>: <code>20021300</code> -&gt; <code>content</code></li>
+</ul>
+</li>
+<li>Notice that there are two sets of app and tmd files, one set with uppercase extensions (<code>.TMD</code> and <code>.APP</code>), and one set with lowercase extensions (<code>.tmd</code> and <code>.app</code>)</li>
+<li>While holding the (R) trigger, press (Y) to create a new directory</li>
+<li>Press (A) to confirm the name <code>newdir</code> (it does not matter what the folder is called)</li>
+<li>Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given</li>
+<li>Press (B) to decline relocking write permissions if prompted</li>
+<li>Press the (L) trigger on each of the uppercase extension files (<code>.TMD</code> and <code>.APP</code>) to mark them</li>
+<li>Press (Y) to copy the files</li>
+<li>Navigate to <code>newdir</code></li>
+<li>Press (Y) to paste the files</li>
+<li>Select "Move path(s)"</li>
+<li>The uppercase extension files will have been moved to the <code>newdir</code> directory</li>
+<li>Press (Start) to reboot your device</li>
+<li>Retry the H&amp;S injection</li>
+<li>If this still doesn't work, move the uppercase extension files back to the <code>content</code> folder, then move the lowercase extension files to the <code>newdir</code> folder, then retry the H&amp;S injection</li>
+</ol>
+<h2 id="a-browser-based-exploit-is-not-working">A browser based exploit is not working</h2>
+<p>Browser based exploits (such as browserhax or 2xrsa) are often unstable and crash frequently, but they can sometimes be fixed by doing the following steps.</p>
+<ol>
+<li>Launch the browser, then launch the browser settings</li>
+<li>Scroll to the bottom and Initialize Savedata (it also may be called Clear All Save Data)</li>
+<li>Try the exploit again</li>
+</ol>
+<h2 id="black-screen-on-sysnand-boot">Black screen on SysNAND boot</h2>
+<ol>
+<li>Try booting with your SD card out, and then reinserting it after booting<ol>
+<li>Power off your device</li>
+<li>Remove your SD card from your device</li>
+<li>Power on your device</li>
+<li>When the home menu appears, reinsert your SD card into your device</li>
+<li>If this worked, you should clear Home Menu's extdata by following these instructions:<ol>
+<li>Power off your device</li>
+<li>Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9</li>
+<li>Press (Home) to bring up the action menu</li>
+<li>Select "Scripts..."</li>
+<li>Select "GM9Megascript"</li>
+<li>Select "Scripts from Plailect's Guide"</li>
+<li>Select "Remove extdata"</li>
+<li>Press (A) to continue</li>
+<li>Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given</li>
+<li>Press (A) to continue</li>
+<li>Press (B) to return to the main menu</li>
+<li>Select "Exit"</li>
+<li>Press (A) to relock write permissions if prompted</li>
+<li>Press (Start) to reboot your device</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Try booting without any cartridges inserted (including flashcarts)</li>
+<li>If you have a hardmod and a NAND backup, flash the backup back to SysNAND</li>
+<li>Try booting into recovery mode and updating your system<ol>
+<li>Power off your device</li>
+<li>Hold (L) + (R) + (A) + (Up)</li>
+<li>Power on your device</li>
+<li>If you enter safe mode, update your device</li>
+</ol>
+</li>
+<li>Your device may be bricked. For support (in English), join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a></li>
+</ol>
+<h2 id="clear-home-menu-extdata">Clear Home Menu extdata</h2>
+<ol>
+<li>Power off your device</li>
+<li>Insert your SD card into your computer</li>
+<li>Navigate to the <code>/Nintendo 3DS/&lt;32-character-id&gt;/&lt;32-character-id&gt;/extdata/00000000/</code> folder on your SD card</li>
+<li>Delete the extdata file corresponding to your region:<ul>
+<li><strong>EUR Region</strong>: <code>00000098</code></li>
+<li><strong>JPN Region</strong>: <code>00000082</code></li>
+<li><strong>USA Region</strong>: <code>0000008f</code></li>
+<li><strong>CHN Region</strong>: <code>000000A1</code></li>
+<li><strong>KOR Region</strong>: <code>000000A9</code></li>
+<li><strong>TWN Region</strong>: <code>000000B1</code></li>
+</ul>
+</li>
+<li>Reinsert your SD card into your device</li>
+</ol>
+<h2 id="black-screen-on-sysnand-boot-after-installing-boot9strap">Black screen on SysNAND boot after Installing boot9strap</h2>
+<ol>
+<li>Ensure you have a working payload<ol>
+<li>Check for the existence of <code>boot.firm</code> in the root of your SD card.</li>
+</ol>
+</li>
+<li>Try resetting Luma's config and fix options<ol>
+<li>Delete <code>/luma/config.bin</code> from your SD card</li>
+<li>Set your options when it boots</li>
+</ol>
+</li>
+<li>Test booting GodMode9<ol>
+<li>On Luma3DS, hold (Start) on boot</li>
+</ol>
+</li>
+<li>Try deleting home menu's extdata by following these instructions:<ol>
+<li>Power off your device</li>
+<li>Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9</li>
+<li>Press (Home) to bring up the action menu</li>
+<li>Select "Scripts..."</li>
+<li>Select "GM9Megascript"</li>
+<li>Select "Scripts from Plailect's Guide"</li>
+<li>Select "Remove extdata"</li>
+<li>Press (A) to continue</li>
+<li>Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given</li>
+<li>Press (A) to continue</li>
+<li>Press (B) to return to the main menu</li>
+<li>Select "Exit"</li>
+<li>Press (A) to relock write permissions if prompted</li>
+<li>Press (Start) to reboot your device</li>
+</ol>
+</li>
+<li>Try booting without any cartridges inserted (including flashcarts)</li>
+<li>If you previously downgraded with Gateway, ensure that you are using the latest Luma3DS version</li>
+<li>Try following <a href="ctrtransfer">CTRTransfer</a></li>
+<li>For support (in English), join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a></li>
+</ol>
+<h2 id="blue-screen-on-boot-bootrom-error">Blue screen on boot (bootrom error)</h2>
+<ol>
+<li>Your device is bricked</li>
+<li>You will need to get an ntrboot-comptible flashcart (one of the ones on <a href="ntrboot">this list</a> or a <a href="https://gbatemp.net/threads/414498/">hardmod</a>, or repair / replace your device</li>
+<li>For support (in English), join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a></li>
+</ol>
+<h2 id="system-update-error-after-installing-cfw">System update error after installing CFW</h2>
+<p>Occasionally, updates may fail to install after installing CFW. To fix this, reboot your device after each step of this section, then try updating again.</p>
+<ol>
+<li>Set your DNS settings to "Auto"</li>
+<li>Move closer to your WiFi router</li>
+<li>Update from Safe Mode by turning off the console, holding (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A) on boot, and following the on-screen prompts</li>
+<li>Delete your WiFi connection, then reconnect to your WiFi again</li>
+<li>Reboot your WiFi router</li>
+<li>Connect to a different WiFi connection, like a mobile hotspot</li>
+<li>Nintendo servers may be down; Try again later</li>
+<li>If you still get an error, <a href="ctrtransfer">follow CTRTransfer</a>, then try again</li>
+<li>For support (in English), join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a></li>
+</ol></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2021 <a href="https://discord.gg/C29hYvh" target="_blank">Nintendo Homebrew</a>, Maintained by the <a href="/Guide-3DS_mkdocs/credits">NH Discord Server</a>.</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
