@@ -8,7 +8,7 @@
         <meta name="author" content="NH Discord Server.">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Get Started - 3DS Hacks Guide</title>
+        <title>Installing boot9strap (SafeB9SInstaller) - 3DS Hacks Guide</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -37,12 +37,12 @@
                             <li class="navitem">
                                 <a href="../.." class="nav-link">Home</a>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active">Get Started</a>
+    <a href="../get-started/" class="dropdown-item">Get Started</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -151,16 +151,8 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#get-started" class="nav-link">Get Started</a>
+            <li class="nav-item" data-level="1"><a href="#installing-boot9strap-safeb9sinstaller" class="nav-link">Installing boot9strap (SafeB9SInstaller)</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#required-reading" class="nav-link">Required Reading</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#version-table" class="nav-link">Version Table</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -168,61 +160,50 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="get-started">Get Started</h1>
+<h1 id="installing-boot9strap-safeb9sinstaller">Installing boot9strap (SafeB9SInstaller)</h1>
 <hr />
-<h2 id="required-reading">Required Reading</h2>
-<div class="admonition tip">
-<p>If you have hacked your 3DS in the past, or you purchased your 3DS second-hand, it is possible that your console already has custom firmware. You should <a href="../../extras/checking-for-cfw/">check for CFW</a> before proceeding.</p>
-</div>
-<p>Select the appropriate page for your version from the chart below. Note that the "from" and "to" fields are inclusive.</p>
-<p>Your device version can be found at the bottom right of the top screen of the System Settings.</p>
-<div class="admonition tip">
-<p><img alt="System Version" src="/images/screenshots/system-version.png" /></p>
-</div>
-<div class="admonition danger">
-<p class="admonition-title">Important</p>
-<p>Before starting, you may want to check your SD card for errors using <a href="h2testw-(windows)">H2testw (Windows)</a>, <a href="f3-(linux)">F3 (Linux)</a>, or <a href="f3xswift-(mac)">F3XSwift (Mac)</a>!</p>
-<p>While we believe that custom firmware is safe for online use, there have been online network bans in the past, primarily for cheating and suspicious eShop behavior.</p>
-</div>
-<h2 id="version-table">Version Table</h2>
-<p>The letter and number after the system version (for example, 11.15.0-<strong>47U</strong>) is not relevant in this version table.</p>
-<table>
-  <colgroup>
-    <col span="1" style="width: 10%;">
-    <col span="1" style="width: 10%;">
-    <col span="1" style="width: 40%;">
-  </colgroup>
-  <thead>
-    <tr>
-      <th style="text-align: center">From</th>
-      <th style="text-align: center">To</th>
-      <th style="text-align: center">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-    <tr>
-      <td style="text-align: center; font-weight: bold;">1.0.0</td>
-      <td style="text-align: center; font-weight: bold;">11.3.0</td>
-      <td style="text-align: center; font-weight: bold;"><a href="/user-guide/installing-boot9strap-(soundhax)">Installing boot9strap (Soundhax)</a></td>
-    </tr>
-    <td style="text-align: center; font-weight: bold;">11.4.0</td>
-      <td style="text-align: center; font-weight: bold;">11.14.0</td>
-      <td style="text-align: center; font-weight: bold;">Update your 3DS to the latest version through System Settings</td>
-    </tr>
-    <tr>
-      <td style="text-align: center; font-weight: bold;" colspan="2">11.15.0 (latest version)</td>
-      <td style="text-align: center; font-weight: bold;"><a href="/user-guide/seedminer">Seedminer</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<hr />
-<p>A number of methods that work on all versions are available, but require additional hardware. If possible, you should follow one of the software methods listed above instead.</p>
+<h3 id="instructions">Instructions</h3>
+<h3 id="section-i-launching-safeb9sinstaller">Section I - Launching SafeB9SInstaller</h3>
 <ol>
-<li><a href="../ntrboot/">ntrboot</a> - requires compatible DS flashcart</li>
-<li><a href="../installing-boot9strap-%28hardmod%29/">Installing boot9strap (Hardmod)</a> - requires soldering</li>
-</ol></div>
+<li>Launch udsploit from the list of homebrew</li>
+<li>Once you see <code>patching kernel... done</code>, press (Start) to exit udsploit<ul>
+<li>This may take several tries</li>
+<li>If it freezes, just force the console to power off by holding the power button, then try again</li>
+</ul>
+</li>
+<li>Launch safehax from the list of homebrew<ul>
+<li>If you get a "PM INIT FAILED" error, make sure you ran udsploit with Wireless Communication turned on</li>
+<li>If you <em>still</em> get a "PM INIT FAILED" error, try using the <a href="https://github.com/TiniVi/safehax/releases/tag/r19">r19 release of safehax</a></li>
+<li>If it freezes, just force the console to power off by holding the power button, then try again</li>
+</ul>
+</li>
+<li>If the exploit was successful, you will have booted into SafeB9SInstaller</li>
+</ol>
+<h3 id="section-ii-installing-boot9strap">Section II - Installing boot9strap</h3>
+<ol>
+<li>Wait for all safety checks to complete</li>
+<li>When prompted, input the key combo given to install boot9strap</li>
+<li>Once it has completed, press (A) to reboot your device</li>
+</ol>
+<h3 id="section-iii-configuring-luma3ds">Section III - Configuring Luma3DS</h3>
+<ol>
+<li>Your device should have rebooted into the Luma3DS configuration menu<ul>
+<li>If you get a black screen, <a href="../../troubleshooting/#black-screen-on-sysnand-boot-after-installing-boot9strap">follow this troubleshooting guide</a></li>
+</ul>
+</li>
+<li>Use the (A) button and the D-Pad to turn on the following:<ul>
+<li><strong>"Show NAND or user string in System Settings"</strong></li>
+</ul>
+</li>
+<li>Press (Start) to save and reboot<ul>
+<li>If you get an error, just continue the next page</li>
+</ul>
+</li>
+</ol>
+<hr />
+<div class="admonition tip">
+<h3 id="continue-to-finalizing-setup">Continue to <a href="../../finalizing-setup/">Finalizing Setup</a></h3>
+</div></div>
             </div>
         </div>
 

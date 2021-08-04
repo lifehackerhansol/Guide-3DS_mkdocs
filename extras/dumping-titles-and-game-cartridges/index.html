@@ -8,7 +8,7 @@
         <meta name="author" content="NH Discord Server.">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Move EmuNAND - 3DS Hacks Guide</title>
+        <title>Dumping Titles and Game Cartridges - 3DS Hacks Guide</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -81,7 +81,7 @@
 </li>
                                     
 <li>
-    <a href="../dumping-titles-and-game-cartridges/" class="dropdown-item">Dumping Titles and Game Cartridges</a>
+    <a href="./" class="dropdown-item active">Dumping Titles and Game Cartridges</a>
 </li>
                                     
 <li>
@@ -89,7 +89,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Move EmuNAND</a>
+    <a href="../move-emunand/" class="dropdown-item">Move EmuNAND</a>
 </li>
                                     
 <li>
@@ -151,17 +151,41 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#move-emunand" class="nav-link">Move EmuNAND</a>
+            <li class="nav-item" data-level="1"><a href="#dumping-titles-and-game-cartridges" class="nav-link">Dumping Titles and Game Cartridges</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#required-reading" class="nav-link">Required Reading</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#what-you-need" class="nav-link">What You Need</a>
+            <li class="nav-item" data-level="2"><a href="#updating-godmode9" class="nav-link">Updating GodMode9</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#instructions" class="nav-link">Instructions</a>
+            <li class="nav-item" data-level="2"><a href="#dumping-a-game-cartridge" class="nav-link">Dumping a Game Cartridge</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#installing-a-game-cartridge-directly-to-the-system" class="nav-link">Installing a Game Cartridge Directly to the System</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dumping-a-3ds-game-cartridge-to-cia" class="nav-link">Dumping a 3DS Game Cartridge to .CIA</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dumping-an-installed-title" class="nav-link">Dumping an Installed Title</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#backup-gba-vc-saves" class="nav-link">Backup GBA VC Saves</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#restore-gba-vc-saves" class="nav-link">Restore GBA VC Saves</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#encrypting-decrypting-a-cia-file" class="nav-link">Encrypting / Decrypting a .CIA file</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -172,23 +196,22 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="move-emunand">Move EmuNAND</h1>
+<h1 id="dumping-titles-and-game-cartridges">Dumping Titles and Game Cartridges</h1>
 <hr />
-<h2 id="required-reading">Required Reading</h2>
-<p>This is an add-on section for moving the contents of a previous EmuNAND to your new SysNAND CFW, then removing the old EmuNAND partition. Note that the terms EmuNAND and RedNAND refer to slightly different implementations of <a href="http://3dbrew.org/wiki/NAND_Redirection">the same concept</a>.</p>
-<p>Note that if you have any payload files other than <code>GodMode9.firm</code> in the <code>/luma/payloads/</code> folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions.</p>
-<div class="admonition danger">
-<p class="admonition-title">Important</p>
-<p>You MUST have already installed Luma3DS and boot9strap to use this.</p>
+<div class="admonition tip">
+<p>For support (in English) with GodMode9, as well as help with scripting and to get updates and info, join <a href="https://discord.gg/BRcbvtFxX4">GodMode9 on Discord</a>.</p>
 </div>
-<h2 id="what-you-need">What You Need</h2>
+<h2 id="required-reading">Required Reading</h2>
+<p>Aside from creating and restoring NAND backups, GodMode9 has the functionality to dump installed titles to an installable <code>.cia</code> file, to dump game cartridge data to a <code>.3ds</code> ROM file, and to directly install a game cartridge to the system.</p>
+<h2 id="updating-godmode9">Updating GodMode9</h2>
+<div class="admonition tip">
+<p>These instructions are written for use with GodMode9 v2.0.0 or later. If you have an older version of GodMode9, follow these instructions to update it.</p>
+</div>
+<h3 id="what-you-need">What You Need</h3>
 <ul>
-<li>An existing EmuNAND</li>
 <li>The latest release of <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a></li>
-<li>The latest release of <a href="https://github.com/Steveice10/FBI/releases/latest">FBI</a></li>
 </ul>
-<h2 id="instructions">Instructions</h2>
-<h3 id="section-i-prep-work">Section I - Prep Work</h3>
+<h3 id="instructions">Instructions</h3>
 <ol>
 <li>Power off your device</li>
 <li>Insert your SD card into your computer</li>
@@ -196,45 +219,73 @@
 <li>Copy the <code>gm9</code> folder from the GodMode9 <code>.zip</code> to the root of your SD card</li>
 <li>Reinsert your SD card into your device</li>
 </ol>
-<h3 id="section-ii-backup-sysnand-dsiware-saves">Section II - Backup SysNAND DSiWare Saves</h3>
+<h2 id="dumping-a-game-cartridge">Dumping a Game Cartridge</h2>
 <div class="admonition tip">
-<p class="admonition-title">DSiWare games</p>
-<p>If you do not have any DSiWare games or saves that you care about, skip this section.</p>
+<p>Insert the game cartridge you intend to dump into your device
+    + 3DS game cartridges will be dumped to a <code>.3ds</code> format
+    + NDS game cartridges will be dumped to a <code>.nds</code> format</p>
 </div>
 <ol>
-<li>Launch GodMode9 by holding (Start) during boot</li>
-<li>If you are prompted to create an essential files backup, press (A) to do so, then press (A) to continue once it has completed</li>
-<li>If you are prompted to fix the RTC date&amp;time, press (A) to do so, then set the date and time, then press (A) to continue<ul>
-<li>Note that, if you had to fix the RTC date and time, you will have to fix the time in the System Settings as well after this guide</li>
+<li>Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9</li>
+<li>Navigate to <code>[C:] GAMECART</code></li>
+<li>Follow the steps applicable to your game cartridge:<ul>
+<li><strong>3DS Game Cartridge:</strong> Press (A) on <code>[TitleID].trim.3ds</code> to select it</li>
+<li><strong>NDS Game Cartridge:</strong> Press (A) on <code>[TitleID].trim.nds</code> to select it</li>
 </ul>
 </li>
-<li>Navigate to <code>[2:] SYSNAND TWLN</code> -&gt; <code>title</code></li>
-<li>Hold (R) and press (A) at the same time on <code>00030004</code> to select the folder, then select "Copy to 0:/gm9/out"<ul>
-<li>This process may take some time if you have many DSiWare games</li>
-</ul>
-</li>
-<li>Press (B) twice to return to the main menu</li>
+<li>Select "Copy to 0:/gm9/out"</li>
+<li>Your non-installable <code>.3ds</code> or <code>.nds</code> formatted file will be outputted to the <code>/gm9/out/</code> folder on your SD card</li>
 </ol>
-<h3 id="section-iii-backup-gba-vc-saves">Section III - Backup GBA VC Saves</h3>
+<h2 id="installing-a-game-cartridge-directly-to-the-system">Installing a Game Cartridge Directly to the System</h2>
 <div class="admonition tip">
-<p class="admonition-title">GBA VC games</p>
-<p>If you do not have any GBA VC games or saves that you care about, skip this section.</p>
+<p>This will only work for 3DS games; it is not possible to install an NDS game cartridge to the system as a title.</p>
 </div>
+<ol>
+<li>Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9</li>
+<li>Navigate to <code>[C:] GAMECART</code></li>
+<li>Press (A) on <code>[TitleID].trim.3ds</code> to select it, then select "NCSD image options...", then select "Install game image"</li>
+<li>Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given</li>
+<li>Once the process is complete, your game will show up in the HOME Menu as an installed title.</li>
+</ol>
+<h2 id="dumping-a-3ds-game-cartridge-to-cia">Dumping a 3DS Game Cartridge to .CIA</h2>
 <div class="admonition tip">
-<p class="admonition-title">Other Virtual Console games</p>
-<p>Note that this is not necessary for any other kind of Virtual Console games (GBC, NES, etc)</p>
+<p>This should only be used if <a href="#installing-a-game-cartridge-directly-to-the-system">Installing a Game Cartridge Directly to the System</a> does not work.</p>
 </div>
+<ol>
+<li>Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9</li>
+<li>Navigate to <code>[C:] GAMECART</code></li>
+<li>Press (A) on <code>[TitleID].trim.3ds</code> to select it, then select "NCSD image options...", then select "Build CIA from file"</li>
+<li>Your installable <code>.cia</code> formatted file will be outputted to the <code>/gm9/out/</code> folder on your SD card</li>
+</ol>
+<h2 id="dumping-an-installed-title">Dumping an Installed Title</h2>
 <div class="admonition tip">
-<p class="admonition-title">Output location</p>
+<p>This allows dumping of both System- and User-installed digital titles, such as ones downloaded from the eShop.</p>
+</div>
+<ol>
+<li>Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9</li>
+<li>Press (Home) to bring up the action menu</li>
+<li>Select "Title manager"</li>
+<li>Select one of the following depending on the type of title you wish to dump<ul>
+<li><strong>User Installed Title</strong>: <code>[A:] SD CARD</code></li>
+<li><strong>System Title / DSiWare</strong>: <code>[1:] NAND / TWL</code></li>
+</ul>
+</li>
+<li>Select the title you wish to dump</li>
+<li>Select "Manage Title..."</li>
+<li>Select "Build CIA (standard)"</li>
+<li>Your installable <code>.cia</code> formatted file will be outputted to the <code>/gm9/out/</code> folder on your SD card</li>
+</ol>
+<h2 id="backup-gba-vc-saves">Backup GBA VC Saves</h2>
+<div class="admonition tip">
 <p>The game will be outputted to the <code>/gm9/out/</code> folder on your SD card with the name <code>&lt;TitleID&gt;.gbavc.sav</code>.</p>
-<p>To identify a <code>&lt;TitleID&gt;.gbavc.sav</code> file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by hovering over <code>[A:] SYSNAND SD</code>, holding (R) and pressing (A) at the same time, then selecting "Search for titles".</p>
+<p>To identify a <code>&lt;TitleID&gt;.gbavc.sav</code> file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by pressing (Home) to bring up the action menu, selecting <code>Title manager</code>, and selecting <code>[A:] SD CARD</code>.</p>
 </div>
 <ol>
 <li>Do the following process for each GBA VC game that you want to backup the save for:<ul>
 <li>Launch the GBA VC game</li>
 <li>Exit the GBA VC game</li>
-<li>Boot your device while holding (Start) to launch the Luma3DS chainloader menu</li>
-<li>Launch GodMode9 by pressing (A)</li>
+<li>Power off your device</li>
+<li>Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9</li>
 <li>Navigate to <code>[S:] SYSNAND VIRTUAL</code></li>
 <li>Press (A) on <code>agbsave.bin</code> to select it</li>
 <li>Select "AGBSAVE options..."</li>
@@ -244,57 +295,16 @@
 </ul>
 </li>
 </ol>
-<h3 id="section-iv-copy-emunand-to-sysnand">Section IV - Copy EmuNAND to SysNAND</h3>
-<ol>
-<li>Launch GodMode9 by holding (Start) during boot</li>
-<li>Navigate to <code>[E:] EMUNAND VIRTUAL</code></li>
-<li>Press (A) on <code>nand.bin</code> to select it, then select "NAND image options...", then select "Restore SysNAND (safe)"</li>
-<li>Press (A) to unlock SysNAND overwriting, then input the key combo given<ul>
-<li>This will not overwrite your boot9strap installation</li>
-</ul>
-</li>
-<li>Input the key combo given to unlock SysNAND (lvl1) writing<ul>
-<li>This process will take some time</li>
-</ul>
-</li>
-<li>Once it has completed, press (A) to continue</li>
-<li>Press (B) to decline relocking write permissions if prompted</li>
-<li>Press (B) to return to the main menu</li>
-</ol>
-<h3 id="section-v-restore-dsiware-saves">Section V - Restore DSiWare Saves</h3>
+<h2 id="restore-gba-vc-saves">Restore GBA VC Saves</h2>
 <div class="admonition tip">
-<p class="admonition-title">DSiWare saves</p>
-<p>If you did not backup DSiWare Saves earlier, skip this section.</p>
+<p>To identify a <code>&lt;TitleID&gt;.gbavc.sav</code> file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by pressing (Home) to bring up the action menu, selecting <code>Title manager</code>, and selecting <code>[A:] SD CARD</code>.</p>
 </div>
 <ol>
-<li>Navigate to <code>[0:] SDCARD</code> -&gt; <code>gm9</code> -&gt; <code>out</code></li>
-<li>Press (Y) on the <code>00030004</code> folder to copy it</li>
-<li>Press (B) twice to return to the main menu</li>
-<li>Navigate to <code>[2:] SYSNAND TWLN</code> -&gt; <code>title</code></li>
-<li>Press (Y) to paste the <code>00030004</code> folder</li>
-<li>Select "Copy path(s)"</li>
-<li>Press (A) to unlock SysNAND (lvl1) writing, then input the key combo given</li>
-<li>Select "Overwrite file(s)"<ul>
-<li>This process may take some time if you have many DSiWare games</li>
-</ul>
-</li>
-<li>Press (B) to decline relocking write permissions if prompted</li>
-<li>Press (B) twice to return to the main menu</li>
-</ol>
-<h3 id="section-vi-restore-gba-vc-saves">Section VI - Restore GBA VC Saves</h3>
-<div class="admonition tip">
-<p class="admonition-title">GBA VC saves</p>
-<p>If you did not backup GBA VC Saves earlier, skip this section.</p>
-<p>To identify a <code>&lt;TitleID&gt;.gbavc.sav</code> file's Title ID, you can get a listing of all games on the system and their corresponding Title IDs by holding (R) and pressing (A) on the GodeMode9 main menu, then selecting "Search for titles".</p>
-</div>
-<ol>
-<li>Hold (R) and press (Start) at the same time to power off your device</li>
-<li>Power on your device into SysNAND</li>
 <li>Do the following process for each GBA VC game that you want to restore the save for:<ul>
 <li>Launch the GBA VC game</li>
 <li>Exit the GBA VC game</li>
-<li>Boot your device while holding (Start) to launch the Luma3DS chainloader menu</li>
-<li>Launch GodMode9 by pressing (A)</li>
+<li>Power off your device</li>
+<li>Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9</li>
 <li>Navigate to <code>[0:] SDCARD</code> -&gt; <code>gm9</code></li>
 <li>Press (Y) on the <code>&lt;TitleID&gt;.gbavc.sav</code> file you wish to restore to copy it</li>
 <li>Press (B) to return to the main menu</li>
@@ -308,63 +318,24 @@
 <li>Exit the GBA VC game</li>
 </ul>
 </li>
-<li>Launch GodMode9 by holding (Start) during boot</li>
 </ol>
-<h3 id="section-vii-backup-sysnand">Section VII - Backup SysNAND</h3>
-<ol>
-<li>Press (Home) to bring up the action menu</li>
-<li>Select "Scripts..."</li>
-<li>Select "GM9Megascript"</li>
-<li>Select "Backup Options"</li>
-<li>Select "SysNAND Backup"</li>
-<li>Press (A) to confirm<ul>
-<li>This process will take some time</li>
-<li>If you get an error, make sure that you have at least 1.3GB of free space on your SD card</li>
-</ul>
-</li>
-<li>Press (A) to continue</li>
-<li>Press (B) to return to the main menu</li>
-<li>Select "Exit"</li>
-<li>Press (A) to relock write permissions if prompted</li>
-<li>Hold (R) and press (B) at the same time to eject your SD card</li>
-<li>Insert your SD card into your computer</li>
-<li>Copy <code>&lt;date&gt;_&lt;serialnumber&gt;_sysnand_###.bin</code> and <code>essential.exefs</code> from the <code>/gm9/out/</code> folder on your SD card to a safe location on your computer<ul>
-<li>Make backups in multiple locations (such as online file storage)</li>
-<li>These backups will save you from a brick and/or help you recover files from the NAND image if anything goes wrong in the future</li>
-</ul>
-</li>
-<li>Delete <code>&lt;date&gt;_&lt;serialnumber&gt;_sysnand_###.bin</code> and <code>&lt;date&gt;_&lt;serialnumber&gt;_sysnand_###.bin.sha</code> from the <code>/gm9/out/</code> folder on your SD card after copying it</li>
-<li><strong>Backup every file on your SD card to a folder on your computer; all files will be deleted in the following steps</strong></li>
-</ol>
-<h3 id="section-viii-format-sd-card">Section VIII - Format SD card</h3>
-<ol>
-<li>Reinsert your SD card into your device</li>
-<li>Press (Home) to bring up the action menu</li>
-<li>Select "More..."</li>
-<li>Select "SD format menu"</li>
-<li>Press (A) to confirm</li>
-<li>Select "No EmuNAND"</li>
-<li>Select "Auto"</li>
-<li>Press (A) to accept the label <code>GM9SD</code><ul>
-<li>Optionally, you may input a custom name for the SD card</li>
-</ul>
-</li>
-<li>When prompted, input the key combo given to confirm</li>
-<li>Hold (R) and press (B) at the same time to eject your SD card</li>
-<li>Insert your SD card into your computer</li>
-<li>Copy all your files back to your SD card<ul>
-<li>Ensure you replace the <code>boot.firm</code> file on your SD card with the one from your backup</li>
-</ul>
-</li>
-<li>Reinsert your SD card into your device</li>
-<li>Press (A) to remount your SD card</li>
-<li>Press (Start) to reboot</li>
-<li>If you get a black screen, <a href="../../troubleshooting/#ts_sys_down">follow this troubleshooting guide</a></li>
-</ol>
-<hr />
+<h2 id="encrypting-decrypting-a-cia-file">Encrypting / Decrypting a .CIA file</h2>
 <div class="admonition tip">
-<h3 id="return-to-finalizing-setup">Return to <a href="../../finalizing-setup/">Finalizing Setup</a>.</h3>
-</div></div>
+<p>For organizational purposes, copy each <code>.cia</code> file you wish to encrypt / decrypt to the <code>/cias/</code> folder on your SD card</p>
+</div>
+<ol>
+<li>Press and hold (Start), and while holding (Start), power on your device. This will launch GodMode9</li>
+<li>Navigate to <code>[0:] SDCARD</code> -&gt; <code>cias</code></li>
+<li>Press (A) on the <code>.cia</code> file to select it, then select "CIA image options..."</li>
+<li>Select the option to perform the desired function:<ul>
+<li><strong>Encrypt to 0:/gm9/out:</strong> Create an encrypted copy of the selected <code>.cia</code> file in the <code>/gm9/out/</code> folder on your SD card</li>
+<li><strong>Decrypt to 0:/gm9/out:</strong> Create a decrypted copy of the selected <code>.cia</code> file in the <code>/gm9/out/</code> folder on your SD card</li>
+<li><strong>Encrypt inplace:</strong> Replace the selected <code>.cia</code> file with an encrypted version</li>
+<li><strong>Decrypt inplace:</strong> Replace the selected <code>.cia</code> file with a decrypted version</li>
+</ul>
+</li>
+<li>Your encrypted / decrypted <code>.cia</code> will be outputted to the desired location</li>
+</ol></div>
             </div>
         </div>
 

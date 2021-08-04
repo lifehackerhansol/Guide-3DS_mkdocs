@@ -81,6 +81,10 @@
 </li>
                                     
 <li>
+    <a href="../dumping-titles-and-game-cartridges/" class="dropdown-item">Dumping Titles and Game Cartridges</a>
+</li>
+                                    
+<li>
     <a href="../godmode9-usage/" class="dropdown-item">GodMode9 Usage</a>
 </li>
                                     
@@ -183,14 +187,14 @@
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Latest Luma3DS</p>
-<p>These instructions will only work on devices with a Luma3DS version of 8.0 or higher. If you have an older version of Luma, you must upgrade your setup before following these instructions. Follow <a href="checking-for-cfw">this page</a> to find your upgrade instructions.</p>
+<p>These instructions will only work on devices with a Luma3DS version of 8.0 or higher. If you have an older version of Luma, you must upgrade your setup before following these instructions. Follow <a href="../checking-for-cfw/">this page</a> to find your upgrade instructions.</p>
 </div>
 <p>Note that if you have any payload files other than <code>GodMode9.firm</code> in the <code>/luma/payloads/</code> folder on your SD card, holding (Start) on boot will display a "chainloader menu" where you will have to use the D-Pad and the (A) button to select "GodMode9" for these instructions. </p>
 <h2 id="what-you-need">What You Need</h2>
 <ul>
 <li>The latest release of <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a></li>
 <li>The latest release of <a href="https://github.com/MechanicalDragon0687/DSiWare-Uninstaller/releases/latest">DSiWare Uninstaller</a></li>
-<li><a href="{{ base_path }}/gm9_scripts/safety_test.gm9">safety_test.gm9</a></li>
+<li><a href="/files/safety_test.gm9">safety_test.gm9</a></li>
 </ul>
 <h2 id="instructions">Instructions</h2>
 <h3 id="section-i-prep-work">Section I - Prep Work</h3>
@@ -219,7 +223,7 @@
 <h4 id="ds-download-play-test">DS Download Play Test</h4>
 <ol>
 <li>Power on your device</li>
-<li>Launch the Download Play application (<img alt="" src="{{ &quot;/images/download-play-icon.png&quot; | absolute_url }}" />{: height="24px" width="24px"})</li>
+<li>Launch the Download Play application (<img alt="" src="/images/download-play-icon.png" style="height:24px; width:24px" />)</li>
 <li>Select "Nintendo DS"</li>
 <li>If your device loads into a "Download software via DS Download Play" menu, the test was successful<ul>
 <li>If your console displays the Japanese version of Flipnote Studio, a black screen, or an error message, the test has failed</li>
@@ -229,7 +233,7 @@
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">Failed DS Mode test</p>
-<p>If either of these tests has failed, DS mode, DS Download Play, and/or DS Connection Settings may be inaccessible once CFW is uninstalled! You should <a href="../troubleshooting#dsi--ds-functionality-is-broken-after-completing-the-guide">fix DS mode</a> before continuing.</p>
+<p>If either of these tests has failed, DS mode, DS Download Play, and/or DS Connection Settings may be inaccessible once CFW is uninstalled! You should <a href="../../troubleshooting/#dsi-ds-functionality-is-broken-after-completing-the-guide">fix DS mode</a> before continuing.</p>
 </div>
 <h3 id="section-iii-safety-test">Section III - Safety Test</h3>
 <p>The purpose of this section is to verify that the console will boot and that critical system functions, like System Settings and the keyboard, will work once CFW is uninstalled. <strong>If you skip this section, you may BRICK your device!</strong></p>
@@ -303,7 +307,7 @@
 </ul>
 </li>
 <li>Exit the System Settings application</li>
-<li>Launch the Download Play application (<img alt="" src="{{ &quot;/images/download-play-icon.png&quot; | absolute_url }}" />{: height="24px" width="24px"})</li>
+<li>Launch the Download Play application (<img alt="" src="/images/download-play-icon.png" style="height:24px; width:24px" />)</li>
 <li>Wait until you see the two buttons</li>
 <li>Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu</li>
 <li>Select "Miscellaneous options"</li>
