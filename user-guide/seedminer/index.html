@@ -147,26 +147,35 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            
+            <li class="nav-item" data-level="1"><a href="#seedminer" class="nav-link">Seedminer</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#required-reading" class="nav-link">Required Reading</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#instructions" class="nav-link">Instructions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-<p>{% include toc title="Table of Contents" %}</p>
-<p>Seedminer-based methods have been replaced by easier, safer methods. Please return to <a href="get-started">Get Started</a> unless you have a legitimate reason to follow this page (such as broken shoulder buttons).
-{: .notice--warning}</p>
-<h3 id="required-reading">Required Reading</h3>
+<h1 id="seedminer">Seedminer</h1>
+<h2 id="required-reading">Required Reading</h2>
 <p>To install boot9strap on your device, we derive your device's unique encryption key.</p>
 <p>To accomplish this, we use a tool called Seedminer to calculate the DSiWare encryption key (<code>movable.sed</code>) for your device. We then use this DSiWare encryption key to decrypt a compatible DSiWare application and inject an exploit into it to run our own code (the exact exploit used will depend on your device's region).</p>
 <p>If this key were completely random, the encryption key would be impossible to break on current computing hardware. Fortunately, the first half of the key (<code>movable_part1.sed</code>) is actually mathematically related to your device's Friend Code, allowing us to break the encryption. For information on how Seedminer works, please see <a href="https://zoogie.github.io/web/34⅕c3">this presentation</a>.</p>
 <p>This method uses a powerful graphics card to perform the calculations needed. A volunteer-run website is used for the purpose of assisting you with this method.</p>
-<h3 id="instructions">Instructions</h3>
-<h4 id="section-i-prep-work">Section I - Prep Work</h4>
+<h2 id="instructions">Instructions</h2>
+<h3 id="section-i-prep-work">Section I - Prep Work</h3>
 <ol>
 <li>Insert your SD card into your computer</li>
 <li>Navigate to the <code>Nintendo 3DS</code> folder on your SD card</li>
-<li>Copy the 32 character long name of the folder you see inside Nintendo 3DS</li>
+<li>Copy the 32 character long name of the folder you see inside Nintendo 3DS<ul>
 <li>Do not go inside any more folders</li>
 <li>If you see multiple folders with long, random names inside <code>Nintendo 3DS</code> without opening any other folders, perform the following:</li>
 <li>Rename the <code>Nintendo 3DS</code> folder to <code>BACKUP_Nintendo 3DS</code></li>
@@ -177,45 +186,65 @@
 <li>Copy the 32 character long name of the folder you see</li>
 <li>Delete the <code>Nintendo 3DS</code> folder</li>
 <li>Rename the <code>BACKUP_Nintendo 3DS</code> folder to <code>Nintendo 3DS</code></li>
-<li>Paste your 32 character long folder name into a document you can reference later</li>
+</ul>
+</li>
+<li>Paste your 32 character long folder name into a document you can reference later<ul>
 <li>This folder name is also known as your "ID0"</li>
+</ul>
+</li>
 <li>Power on your device</li>
-<li>Go to your Friend List (the <a href="{{ &quot;/images/friend-list-icon.png&quot; | absolute_url }}">orange Face Icon</a> in the top row of your Home Menu)</li>
+<li>Go to your Friend List (the <a href="{{ &quot;/images/friend-list-icon.png&quot; | absolute_url }}">orange Face Icon</a> in the top row of your Home Menu)<ul>
 <li>If you receive an error and are kicked out of the menu, you either must create a new Mii or your device cannot connect to Nintendo's servers (due to a ban or connection issues)</li>
+</ul>
+</li>
 <li>Find your Mii profile, then find the "Friend Code" field on the top screen</li>
 </ol>
-<h4 id="section-ii-seedminer">Section II - Seedminer</h4>
+<h3 id="section-ii-seedminer">Section II - Seedminer</h3>
 <ol>
-<li>Open <a href="https://seedminer.hacks.guide/">Bruteforce Movable</a> on your computer</li>
+<li>Open <a href="https://seedminer.hacks.guide/">Bruteforce Movable</a> on your computer<ul>
 <li>This site can automate the retrieval of <code>movable_part1.sed</code> (using a bot 3DS console) and the breaking of your device's DSiWare encryption (using a volunteer's computer to run Seedminer)</li>
 <li>If the site isn't working, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and ask (in English) for someone there to assist you</li>
+</ul>
+</li>
 <li>Enter your device's Friend Code (with no spaces or dashes) into the "Your friend code" field</li>
-<li>Paste your device's 32 character long folder name into the "Your ID0" field</li>
+<li>Paste your device's 32 character long folder name into the "Your ID0" field<ul>
 <li>Do not attempt to enter the ID0 by hand. Ensure the ID0 is entered correctly by copying and pasting it from where you saved it in the previous section</li>
-<li>Select "Go"</li>
+</ul>
+</li>
+<li>Select "Go"<ul>
 <li>If the site immediately goes to step 4, download your <code>movable.sed</code> file and continue with the next section</li>
+</ul>
+</li>
 <li>When prompted, use the "Register Friend" button on your device to add the friend code of the bot 3DS console</li>
-<li>Wait for the site to update</li>
+<li>Wait for the site to update<ul>
 <li>If it does not, wait a few minutes before refreshing the page once</li>
+</ul>
+</li>
 <li>Once the site processes your information, you will be given the option to "Continue" or "Do another device". Click the green "Continue" button</li>
-<li>Wait for the remainder of the process to complete</li>
+<li>Wait for the remainder of the process to complete<ul>
 <li>This is usually fast (1-5 minutes) but in some cases, can take up to half an hour</li>
 <li>During this process, the bot you added may not show up on your 3DS. As long as the website updates, this is not an issue</li>
 <li>If you are still waiting after half an hour, join <a href="https://discord.gg/MWxPgEp">Nintendo Homebrew on Discord</a> and ask (in English) for someone there to assist you</li>
-<li>When the process has completed, download your <code>movable.sed</code> file from the site</li>
+</ul>
+</li>
+<li>When the process has completed, download your <code>movable.sed</code> file from the site<ul>
 <li>Keep this file as you will need it in the upcoming pages</li>
+</ul>
+</li>
 </ol>
 <hr />
-<h4 id="pichaxx-universal-otherapp-recommended">PicHaxx + universal-otherapp (Recommended)</h4>
+<h3 id="pichaxx-universal-otherapp-recommended">PicHaxx + universal-otherapp (Recommended)</h3>
 <p>This method of using Seedminer for further exploitation uses your <code>movable.sed</code> file to write a custom save file for Pokémon Picross, which can then be used in conjunction with universal-otherapp to install custom firmware.</p>
 <p>This route requires the Pokémon Picross application (free on eShop), and thus requires eShop access and a 3DS with a region of USA, EUR, or JPN.</p>
-<p>Continue to <a href="installing-boot9strap-(pichaxx)">Installing boot9strap (PicHaxx)</a>
-{: .notice--primary}</p>
-<h4 id="bannerbomb3-fredtool">BannerBomb3 + Fredtool</h4>
+<div class="admonition tip">
+<p>Continue to <a href="installing-boot9strap-(pichaxx)">Installing boot9strap (PicHaxx)</a></p>
+</div>
+<h3 id="bannerbomb3-fredtool">BannerBomb3 + Fredtool</h3>
 <p>This method of using Seedminer for further exploitation uses your <code>movable.sed</code> file to create a custom DSiWare backup that exploits the system to dump system DSiWare.</p>
 <p>This route is only recommended if you are for some reason unable to follow the PicHaxx + universal-otherapp route.</p>
-<p>Continue to <a href="bannerbomb3">BannerBomb3</a>
-{: .notice--warning}</p></div>
+<div class="admonition tip">
+<p>Continue to <a href="bannerbomb3">BannerBomb3</a></p>
+</div></div>
             </div>
         </div>
 
